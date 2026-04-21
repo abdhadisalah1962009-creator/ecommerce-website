@@ -1,0 +1,141 @@
+export const categories = [
+  {
+    id: 'cat-1',
+    name: 'Electronics',
+    description: 'Modern gadgets for work, entertainment, and travel.',
+    image:
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'cat-2',
+    name: 'Fashion',
+    description: 'Stylish clothing and accessories with polished details.',
+    image:
+      'https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'cat-3',
+    name: 'Home',
+    description: 'Beautiful home essentials for a calm and elevated space.',
+    image:
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'cat-4',
+    name: 'Beauty',
+    description: 'Clean beauty and self-care essentials for glowing skin.',
+    image:
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
+  },
+];
+
+export const products = [
+  {
+    id: 'prod-1',
+    name: 'Wireless Noise Cancelling Headphones',
+    price: 199.99,
+    description: 'Premium audio with a lightweight fit and long battery life.',
+    image:
+      'https://images.unsplash.com/photo-1518443821935-46852fc6c929?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-1',
+  },
+  {
+    id: 'prod-2',
+    name: 'Smartwatch Fitness Tracker',
+    price: 149.99,
+    description: 'Track workouts, sleep, and notifications in one elegant device.',
+    image:
+      'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-1',
+  },
+  {
+    id: 'prod-3',
+    name: 'Italian Leather Tote Bag',
+    price: 129.99,
+    description: 'Structured carrying with soft leather and polished hardware.',
+    image:
+      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-2',
+  },
+  {
+    id: 'prod-4',
+    name: 'Minimalist Linen Shirt',
+    price: 54.99,
+    description: 'Breathable linen with a relaxed yet refined silhouette.',
+    image:
+      'https://images.unsplash.com/photo-1495121605193-b116b5b9c5d1?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-2',
+  },
+  {
+    id: 'prod-5',
+    name: 'Scandinavian Table Lamp',
+    price: 74.99,
+    description: 'Soft ambient light with clean edges and warm finish.',
+    image:
+      'https://images.unsplash.com/photo-1549187774-b4e9c2f2d9c8?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-3',
+  },
+  {
+    id: 'prod-6',
+    name: 'Organic Cotton Throw Pillow',
+    price: 32.0,
+    description: 'Textured comfort for a cozy modern living room.',
+    image:
+      'https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-3',
+  },
+  {
+    id: 'prod-7',
+    name: 'Hydrating Facial Mist',
+    price: 24.99,
+    description: 'Instant refresh with botanical extracts and a dewy finish.',
+    image:
+      'https://images.unsplash.com/photo-1536305030015-7af5a4a4339a?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-4',
+  },
+  {
+    id: 'prod-8',
+    name: 'Natural Lip Balm Trio',
+    price: 18.0,
+    description: 'Soft, nourishing shine in three gentle shades.',
+    image:
+      'https://images.unsplash.com/photo-1513506003901-1e6a229e2d5c?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-4',
+  },
+  {
+    id: 'prod-9',
+    name: 'Bluetooth Portable Speaker',
+    price: 89.99,
+    description: 'Compact performance with rich bass and splash resistance.',
+    image:
+      'https://images.unsplash.com/photo-1519669556875-0b2f1a0c4387?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-1',
+  },
+  {
+    id: 'prod-10',
+    name: 'Everyday Denim Jacket',
+    price: 98.0,
+    description: 'Crisp denim with a modern relaxed fit for layering.',
+    image:
+      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-2',
+  },
+  {
+    id: 'prod-11',
+    name: 'Scented Candle Set',
+    price: 39.99,
+    description: 'Balanced aromas designed to calm and refresh any room.',
+    image:
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-3',
+  },
+  {
+    id: 'prod-12',
+    name: 'Daily Glow Serum',
+    price: 52.0,
+    description: 'Brightening serum made for everyday radiance.',
+    image:
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
+    category_id: 'cat-4',
+  },
+];
