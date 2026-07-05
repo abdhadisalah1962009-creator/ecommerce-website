@@ -1,112 +1,129 @@
-import { Link } from 'react-router-dom'
-import { categories, products } from '../data'
-import ProductCard from '../components/ProductCard'
+import { Link } from "react-router";
+import ProductCard from "../components/ProductCard";
+import { categories, products } from "../data";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  // const featuredProducts = products.slice(0, 8);
+  // const previewCategories = categories.slice(0, 4);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+  const [previewCategories, setPreviewCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/categories")
+      .then((res) => res.json())
+      .then((data) => setPreviewCategories(data.data))
+      .catch((err) => console.error("Error fetching categories:", err))
+      .finally(() => setLoading(false));
+  }, []);
+ useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/products/")
+      .then((res) => res.json())
+      .then((data) => setFeaturedProducts(data.data))
+      .catch((err) => console.error("Error fetching products:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
-    <main className="mx-auto max-w-7xl px-4 pb-16 pt-10 md:px-6">
-      <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="space-y-6">
-          <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-slate-600">
-            New collection
-          </span>
-          <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-            Modern essentials for a fresh and polished online shopping experience.
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Welcome to ShopHub
           </h1>
-          <p className="max-w-xl text-base leading-8 text-slate-600">
-            Discover curated products across electronics, fashion, home, and beauty. Shop with confidence using a clean, responsive interface.
+          <p className="text-xl md:text-2xl mb-8 text-purple-100">
+            Discover amazing products at unbeatable prices
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to="/products"
-              className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-800"
-            >
-              Shop Now
-            </Link>
-            <Link
-              to="/categories"
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
-            >
-              Browse Categories
-            </Link>
-          </div>
-        </div>
-
-        <div className="rounded-[2rem] bg-slate-100 p-8 shadow-sm lg:p-10">
-          <div className="space-y-5">
-            <div className="rounded-[1.75rem] bg-white p-6 shadow-sm">
-              <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Trending picks</p>
-                <h2 className="text-2xl font-semibold text-slate-900">Minimal designs for everyday living</h2>
-                <p className="text-sm leading-6 text-slate-600">
-                  We help customers find the right products with balanced visuals, clean cards, and natural spacing.
-                </p>
-              </div>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl bg-slate-50 p-5">
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Fast delivery</p>
-                <p className="mt-3 text-sm text-slate-600">Receive orders quickly with secure checkout and easy returns.</p>
-              </div>
-              <div className="rounded-3xl bg-slate-50 p-5">
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Expert support</p>
-                <p className="mt-3 text-sm text-slate-600">Shop with confidence using 24/7 customer support and modern product filters.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-16">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Categories</p>
-            <h2 className="mt-2 text-3xl font-semibold text-slate-900">Featured Categories</h2>
-          </div>
-          <Link
-            to="/categories"
-            className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
-          >
-            View All
-          </Link>
-        </div>
-
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-          {categories.slice(0, 4).map((category) => (
-            <div key={category.id} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-              <img src={category.image} alt={category.name} className="h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-slate-900">{category.name}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{category.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-16">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Products</p>
-            <h2 className="mt-2 text-3xl font-semibold text-slate-900">Top Picks</h2>
-          </div>
           <Link
             to="/products"
-            className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
+            className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition text-lg"
           >
-            View All Products
+            Shop Now
+          </Link>
+        </div>
+      </section>
+
+      {/* Categories Preview */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-4xl font-bold text-gray-900">Categories</h2>
+          <Link
+            to="/categories"
+            className="text-purple-600 hover:text-purple-700 font-semibold flex items-center gap-2"
+          >
+            View All
+            <span>→</span>
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {products.slice(0, 8).map((product) => {
-            const category = categories.find((item) => item.id === product.category_id)
-            return (
-              <ProductCard key={product.id} product={product} categoryName={category?.name} />
-            )
-          })}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {loading
+            ? "loading ..."
+            : previewCategories.map((category) => (
+                <Link
+                  key={category.id}
+                  to={`/categories/${category.id}`}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative overflow-hidden rounded-lg h-48 mb-4">
+                    <img
+                      src={`http://127.0.0.1:8000/storage/${category.image}`}
+                      alt={category.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black opacity-50 group-hover:bg-opacity-40 transition-all duration-300"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition">
+                    {category.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {category.description}
+                  </p>
+                </Link>
+              ))}
         </div>
       </section>
-    </main>
-  )
+
+      {/* Featured Products */}
+      <section className="max-w-7xl mx-auto px-4 py-16 bg-gray-50 rounded-lg">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-4xl font-bold text-gray-900">
+            Featured Products
+          </h2>
+          <Link
+            to="/products"
+            className="text-purple-600 hover:text-purple-700 font-semibold flex items-center gap-2"
+          >
+            View All Products
+            <span>→</span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {loading
+            ? "loading ..."
+            : featuredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-purple-100 my-16 py-12 px-4 rounded-lg">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Special Offer - Get 20% Off!
+          </h2>
+          <p className="text-gray-700 text-lg mb-6">
+            Subscribe to our newsletter for exclusive deals and updates
+          </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-bold transition">
+            Shop Now
+          </button>
+        </div>
+      </section>
+    </div>
+  );
 }
