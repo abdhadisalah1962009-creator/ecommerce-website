@@ -7,7 +7,7 @@ export default function ProductCard({ product, categoryName }) {
     <article className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
       <div className="overflow-hidden bg-slate-100">
         <img
-        src={`http://127.0.0.1:8000/storage/${product.image}`}
+        src={`https://ecommerce-backend-vbv3.onrender.com/storage/${product.image}`}
           alt={product.name}
           className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
         />
