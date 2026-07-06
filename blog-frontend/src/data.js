@@ -3,25 +3,25 @@ export const categories = [
     id: 'cat-1',
     name: 'Electronics',
     description: 'Modern gadgets for work, entertainment, and travel.',
-    image: 'https://loremflickr.com/800/600/electronics,gadget',
+    image: 'https://picsum.photos/seed/electronics-cat/800/600',
   },
   {
     id: 'cat-2',
     name: 'Fashion',
     description: 'Stylish clothing and accessories with polished details.',
-    image: 'https://loremflickr.com/800/600/fashion,clothing',
+    image: 'https://picsum.photos/seed/fashion-cat/800/600',
   },
   {
     id: 'cat-3',
     name: 'Home',
     description: 'Beautiful home essentials for a calm and elevated space.',
-    image: 'https://loremflickr.com/800/600/home,decor',
+    image: 'https://picsum.photos/seed/home-cat/800/600',
   },
   {
     id: 'cat-4',
     name: 'Beauty',
     description: 'Clean beauty and self-care essentials for glowing skin.',
-    image: 'https://loremflickr.com/800/600/beauty,cosmetics',
+    image: 'https://picsum.photos/seed/beauty-cat/800/600',
   },
 ];
 
@@ -31,7 +31,7 @@ export const products = [
     name: 'Wireless Noise Cancelling Headphones',
     price: 199.99,
     description: 'Premium audio with a lightweight fit and long battery life.',
-    image: 'https://loremflickr.com/800/800/headphones,wireless',
+    image: 'https://picsum.photos/seed/headphones-1/800/800',
     category_id: 'cat-1',
   },
   {
@@ -39,7 +39,7 @@ export const products = [
     name: 'Smartwatch Fitness Tracker',
     price: 149.99,
     description: 'Track workouts, sleep, and notifications in one elegant device.',
-    image: 'https://loremflickr.com/800/800/smartwatch,fitness',
+    image: 'https://picsum.photos/seed/smartwatch-2/800/800',
     category_id: 'cat-1',
   },
   {
@@ -47,7 +47,7 @@ export const products = [
     name: 'Italian Leather Tote Bag',
     price: 129.99,
     description: 'Structured carrying with soft leather and polished hardware.',
-    image: 'https://loremflickr.com/800/800/leather,handbag',
+    image: 'https://picsum.photos/seed/totebag-3/800/800',
     category_id: 'cat-2',
   },
   {
@@ -55,7 +55,7 @@ export const products = [
     name: 'Minimalist Linen Shirt',
     price: 54.99,
     description: 'Breathable linen with a relaxed yet refined silhouette.',
-    image: 'https://loremflickr.com/800/800/linen,shirt',
+    image: 'https://picsum.photos/seed/linenshirt-4/800/800',
     category_id: 'cat-2',
   },
   {
@@ -63,7 +63,7 @@ export const products = [
     name: 'Scandinavian Table Lamp',
     price: 74.99,
     description: 'Soft ambient light with clean edges and warm finish.',
-    image: 'https://loremflickr.com/800/800/tablelamp,lighting',
+    image: 'https://picsum.photos/seed/tablelamp-5/800/800',
     category_id: 'cat-3',
   },
   {
@@ -71,7 +71,7 @@ export const products = [
     name: 'Organic Cotton Throw Pillow',
     price: 32.0,
     description: 'Textured comfort for a cozy modern living room.',
-    image: 'https://loremflickr.com/800/800/throwpillow,cushion',
+    image: 'https://picsum.photos/seed/throwpillow-6/800/800',
     category_id: 'cat-3',
   },
   {
@@ -79,7 +79,7 @@ export const products = [
     name: 'Hydrating Facial Mist',
     price: 24.99,
     description: 'Instant refresh with botanical extracts and a dewy finish.',
-    image: 'https://loremflickr.com/800/800/facemist,skincare',
+    image: 'https://picsum.photos/seed/facialmist-7/800/800',
     category_id: 'cat-4',
   },
   {
@@ -87,7 +87,7 @@ export const products = [
     name: 'Natural Lip Balm Trio',
     price: 18.0,
     description: 'Soft, nourishing shine in three gentle shades.',
-    image: 'https://loremflickr.com/800/800/lipbalm,cosmetics',
+    image: 'https://picsum.photos/seed/lipbalm-8/800/800',
     category_id: 'cat-4',
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     name: 'Bluetooth Portable Speaker',
     price: 89.99,
     description: 'Compact performance with rich bass and splash resistance.',
-    image: 'https://loremflickr.com/800/800/speaker,bluetooth',
+    image: 'https://picsum.photos/seed/speaker-9/800/800',
     category_id: 'cat-1',
   },
   {
@@ -103,7 +103,7 @@ export const products = [
     name: 'Everyday Denim Jacket',
     price: 98.0,
     description: 'Crisp denim with a modern relaxed fit for layering.',
-    image: 'https://loremflickr.com/800/800/denim,jacket',
+    image: 'https://picsum.photos/seed/denimjacket-10/800/800',
     category_id: 'cat-2',
   },
   {
@@ -111,7 +111,7 @@ export const products = [
     name: 'Scented Candle Set',
     price: 39.99,
     description: 'Balanced aromas designed to calm and refresh any room.',
-    image: 'https://loremflickr.com/800/800/candle,scented',
+    image: 'https://picsum.photos/seed/candle-11/800/800',
     category_id: 'cat-3',
   },
   {
@@ -119,7 +119,7 @@ export const products = [
     name: 'Daily Glow Serum',
     price: 52.0,
     description: 'Brightening serum made for everyday radiance.',
-    image: 'https://loremflickr.com/800/800/serum,skincare',
+    image: 'https://picsum.photos/seed/serum-12/800/800',
     category_id: 'cat-4',
   },
 ];
