@@ -1,3 +1,4 @@
+
 export const categories = [
   {
     id: 'cat-1',
@@ -24,7 +25,7 @@ export const categories = [
     image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80',
   },
 ];
-
+ 
 export const products = [
   {
     id: 'prod-1',
@@ -55,7 +56,7 @@ export const products = [
     name: 'Minimalist Linen Shirt',
     price: 54.99,
     description: 'Breathable linen with a relaxed yet refined silhouette.',
-    image: 'https://images.unsplash.com/photo-1521335601405-5b1b4f2c7d2e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80',
     category_id: 'cat-2',
   },
   {
@@ -87,7 +88,7 @@ export const products = [
     name: 'Natural Lip Balm Trio',
     price: 18.0,
     description: 'Soft, nourishing shine in three gentle shades.',
-    image: 'https://images.unsplash.com/photo-1495121605193-b116b5b9c5d0?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&q=80',
     category_id: 'cat-4',
   },
   {
